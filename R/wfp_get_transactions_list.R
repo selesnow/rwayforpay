@@ -18,8 +18,8 @@ wfp_get_transactions_list <- function(
   api_version = 2
 ) {
 
-  start <- as.POSIXct(date_begin) %>% as.numeric()
-  end   <- as.POSIXct(date_end) %>% as.numeric()
+  start <- as.POSIXct(date_begin) %>% as.numeric() %>% round(0)
+  end   <- as.POSIXct(date_end) %>% as.numeric() %>% round(0)
   merchant_signature <- paste(merchant_login, start, end, sep = ';') %>%
                         md5(merchant_secret_key) %>%
                         iconv(from = '1251', to = 'UTF-8') %>%
