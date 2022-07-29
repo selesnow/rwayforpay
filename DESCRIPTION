@@ -1,6 +1,6 @@
 Package: rwayforpay
 Title: Get Transactions List From 'WayForPay' 
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given   = "Alexey",
            family  = "Seleznev",
