@@ -74,6 +74,6 @@ wfp_get_currency_rates_to_date <- function(
     unnest_wider(rates) %>%
     unnest_wider(rates) %>%
     select(-reasonCode, -reason) %>%
-    mutate(ratesDate = as.POSIXct(ratesDate, origin = '1970-01-01', tz = 'Europe/Kiev'))
+    mutate(ratesDate = as.POSIXct(ratesDate, origin = '1970-01-01', tz = 'EEST'))
 
 }
