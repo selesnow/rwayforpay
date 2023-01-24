@@ -43,6 +43,11 @@ wfp_get_currency_rates_to_date <- function(
   api_version = 1
 ) {
 
+  # it is need for normal signture
+  oldpar <- options('scipen')
+  on.exit(options(oldpar))
+  options(scipen = 999)
+
   date <- date %>%
           as.POSIXct() %>%
           as.numeric() %>%
